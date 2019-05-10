@@ -11,7 +11,7 @@ Socket programming for communication between client and server over wireless TCP
 
 ### Perform nslookup with python script:
 Follow the instrunctions to perform nslookup with python
-1. ```git clone https://github.com/Adhira-Deogade/Client_Server-communication.git[https://github.com/Adhira-Deogade/Client_Server-communication.git]```
+1. ```git clone https://github.com/Adhira-Deogade/Client_Server-communication.git```
 2. Copy the code in *nslookup.ipynb*[nslookup.ipynb]
 3. Create a new python file named "nslookup.py"
 4. ```nano nslookup.py```
