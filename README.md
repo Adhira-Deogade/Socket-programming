@@ -1,4 +1,5 @@
-# Socket programming for communication between client and server over wireless TCP/UDP protocols
+# Socket programming
+### Communication between client and server over wireless TCP/UDP protocols
 
 ## What is NSLookup?
 - Name server Lookup
