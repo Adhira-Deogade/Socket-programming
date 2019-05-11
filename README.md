@@ -30,27 +30,41 @@ You will also obtain the server to which your server is communicating in order t
   
 ## 3. Creating a client-server communication with User Datagram Protocol(UDP)
   ### 1. Creating [UDP server](UDPserver.ipynb)
-    1. ```ServerSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)``` creates a socket with following specifications:
+   1. ```socket.socket(socket.AF_INET, socket.SOCK_DGRAM)``` 
+   creates a socket with following specifications:
       - ```AF_NET``` defines an IPv4 connection
       - ```SOCK_DGRAM``` defines datagram for User Datafram Protocol
-    2. ```ServerSocket.recvfrom(2048)``` obtains client's address and its message
-    3. ```ServerSocket.sendto(modifiedmessage,ClientAddress)``` Sends modified data to client address
+   2. ```ServerSocket.recvfrom(2048)``` obtains client's address and its message
+   3. ```ServerSocket.sendto(modifiedmessage,ClientAddress)``` Sends modified data to client address
     When the server is ready to receive data, start the client
     
   ### 2. Creating [UDP client](UDPclient.ipynb)
-    1. ```ClientSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)``` Create socket for client with same configuration as server (IPv4 and daatgram)
-    2. ```ClientSocket.sendto(message,(ServerName,ServerPort))``` Send data to server address
-    3. ```ClientSocket.close()``` Close the socket
+   1. ```ClientSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)``` Create socket for client with same configuration as server (IPv4 and datagram)
+   2. ```ClientSocket.sendto(message,(ServerName,ServerPort))``` Send data to server address
+   3. ```ClientSocket.close()``` Close the socket
     
 ## 4. Creating a client-server communication with Transmission Control Protocol(TCP)
   ### 1. Creating [TCP server](TCPserver.ipynb)
-    1. ```serverSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)``` creates a socket with following specifications:
+   1. ```serverSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)``` creates a socket with following specifications:
       - ```AF_NET``` defines an IPv4 connection
       - ```SOCK_STREAM``` defines streams of data for Transmission Control Protocol
-    2. ```serverSocket.bind(ServerAddress)``` Associates server port number with socket
-    3. ```serverSocket.listen(1)```Waits for some client to knock on the socket door (defines maximum number of queued connections (atleast 1)
+   2. ```serverSocket.bind(ServerAddress)``` Associates server port number with socket
+   3. ```serverSocket.listen(1)```Waits for some client to knock on the socket door (defines maximum number of queued connections (atleast 1)
     4. ```connection_socket, addr = serverSocket.accept()``` Create a connection socket
     3. Receive, update and send the modified message back to client address. Close the connection
   
   ### 2. Creating [TCP client](TCPclient.ipynb)
-    1. 
+   1. ```ClientSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)``` Create socket for client with same configuration as server (IPv4 and streams)
+   2. ```clientSocket.recvfrom(2048)``` Keep receiveing information from server
+   
+   
+## Exercise
+#### Client will continuouslu provide mathematical problems, while server will keep solving them
+
+1. Create a [TCP server](assgn_server.ipynb)
+2. On receving the math problem, solve it with ```modified_message = eval(message)```
+3. Create a [TCP client](assgn_client.ipynb)
+4. Send math query to server with ```str(raw_input('Enter the lower case message: '))```
+
+
+##### Always, first start the server and then the client
