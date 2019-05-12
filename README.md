@@ -60,7 +60,7 @@ You will also obtain the server to which your server is communicating in order t
    
    
 ## Exercise
-#### Client will continuouslu provide mathematical problems, while server will keep solving them
+##### Write a python code such that -> Client will continuously provide mathematical problems, while server will keep solving them
 
 1. Create a [TCP server](assgn_server.ipynb)
 2. On receving the math problem, solve it with ```modified_message = eval(message)```
