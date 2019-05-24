@@ -8,7 +8,7 @@
 - DNS records
 
 
-###### All the files are jupyter notebooks. Instead of creating pyton files, you can chose to run the notebooks as they are.
+###### All the files are jupyter notebooks. Instead of creating python files, you can chose to run the notebooks as they are.
 
 ## 1. Perform nslookup with python script:
 Follow the instrunctions to perform nslookup with python
