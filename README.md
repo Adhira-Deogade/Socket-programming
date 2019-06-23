@@ -8,7 +8,7 @@
 - DNS records
 
 
-###### All the files are jupyter notebooks. Instead of creating python files, you can chose to run the notebooks as they are.
+###### All the files are jupyter notebooks. Instead of creating python files, you can choose to run the notebooks as they are.
 
 ## 1. Perform nslookup with python script:
 Follow the instrunctions to perform nslookup with python
@@ -19,8 +19,8 @@ Follow the instrunctions to perform nslookup with python
 5. Paste the code and exit the file (Ctrl+O and Ctrl+X)
 6. ```python nslookup.py "webite name"``` (Eg. ```python nslookup.py gmail.com```)
 
-You will obtain the server that yuor computer is connected to and the port number
-You will also obtain the server to which your server is communicating in order to obtain information from gmail.com (Non-suthoritative)
+You will obtain the server that your computer is connected to and the *port number*.
+You will also obtain the *server* to which your server is communicating in order to obtain information from gmail.com (Non-authoritative)
 
 ## 2. Open a web browser and a website with Linux and python
 1. Run the code in [Webbrowser.ipynb](WebBrowser.ipynb)
@@ -29,7 +29,7 @@ You will also obtain the server to which your server is communicating in order t
     - url: url to be opened (here "gmail.com")
     - *new=2* indicates to open a new tab
   
-## 3. Creating a client-server communication with User Datagram Protocol(UDP)
+## 3. Creating a client-server communication with User Datagram Protocol (UDP)
   ### 1. Creating [UDP server](UDPserver.ipynb)
    1. ```socket.socket(socket.AF_INET, socket.SOCK_DGRAM)``` 
    creates a socket with following specifications:
